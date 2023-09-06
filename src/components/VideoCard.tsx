@@ -6,7 +6,7 @@ import Link from "next/link";
 const VideoCard = ({ video }: { video: YouTubeSearchResult }) => {
   return (
     <div
-      className="h-max w-[500px] min-[684px]:w-[290px] md:w-[310px] min-[890px]:w-[350px] min-[1132px]:w-[326px] overflow-hidden mb-10 min-[990px]:w-[410px] xl:w-[365px]"
+      className="h-max w-[500px] min-[684px]:w-[290px] md:w-[310px] min-[890px]:w-[350px] min-[1132px]:w-[326px] overflow-hidden mb-7 min-[990px]:w-[410px] xl:w-[365px]"
       key={video?.id?.videoId}
     >
       <Link href={`/video/${video?.id?.videoId}`} className="">

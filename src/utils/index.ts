@@ -36,10 +36,10 @@ export function KonvertDate(date: string) {
       const rataRataHariPerBulan = 30.44;
       const jumlahBulan = res / rataRataHariPerBulan;
       const jumlahTahun = Math.floor(jumlahBulan / 12);
-      return ` ${jumlahTahun > 1 ? "Years" : "1 Year"} ago`;
+      return ` ${jumlahTahun > 1 ? `${jumlahTahun} Years` : "1 Year"} ago`;
     }
-    return ` ${jumlahBulan > 1 ? "Months" : "1 Month"} ago`;
+    return ` ${jumlahBulan > 1 ? `${jumlahBulan} Months` : "1 Month"} ago`;
   }
 
-  return ` ${selisihHari > 1 ? "Days" : "1 Day"} ago`;
+  return ` ${selisihHari > 1 ? `${selisihHari} Days` : "1 Day"} ago`;
 }

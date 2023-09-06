@@ -1,11 +1,11 @@
 import { ButtonIconsType } from "@/types";
 
 export default function Icons({
-  p = "p-3",
+  p = "md:p-3 p-1",
   children,
   text,
   bg = "md:bg-slate-100",
-  size = "text-[18px] md:text-[20px]",
+  size = "text-[20px]",
   type = "submit",
   styles,
   onClick = () => {},

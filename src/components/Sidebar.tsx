@@ -1,5 +1,6 @@
 import { sidebar } from "@/constants/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -7,7 +8,8 @@ const Sidebar = () => {
       <div className="container mx-auto px-1 z-[1] bg-white ">
         <div className="flex md:flex-col flex-row justify-evenly">
           {sidebar.map(({ name, src }) => (
-            <button
+            <Link
+              href={"/"}
               key={name}
               className="w-[65px] h-[75px] flex-center flex-col hover:bg-gray-200 rounded-lg"
             >
@@ -15,7 +17,7 @@ const Sidebar = () => {
               <span key={name} className="text-[10px] font-normal mt-1">
                 {name}
               </span>
-            </button>
+            </Link>
           ))}
         </div>
       </div>
