@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 const SearchVideoCard = ({ video }: { video: YouTubeSearchResult }) => {
+  const title = video?.snippet?.title;
   return (
     <div
       className="h-max w-[500px] min-[684px]:w-full min-[684px]:flex mb-2 "
@@ -27,13 +28,13 @@ const SearchVideoCard = ({ video }: { video: YouTubeSearchResult }) => {
           href={`/watch?v=${video?.id?.videoId}`}
           className="font-semibold text-base mb-1 min-[1200px]:hidden min-[1000px]:text-sm"
         >
-          {video?.snippet?.title.slice(0, 28)}...
+          {title.slice(0, 28)}...
         </Link>
         <Link
           href={`/watch?v=${video?.id?.videoId}`}
           className="font-semibold text-base mb-1 hidden min-[1200px]:block  min-[1000px]:text-sm"
         >
-          {video?.snippet?.title}
+          {title.length > 150 ? <>{title.slice(0, 150)}</> : <>{title}...</>}
         </Link>
         <span className="text-slate-500 text-sm font-normal mb-1 ">
           {KonvertDate(video?.snippet?.publishTime)}

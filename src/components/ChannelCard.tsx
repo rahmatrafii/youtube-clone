@@ -26,7 +26,7 @@ const ChannelCard = async ({ data }: any) => {
         <div className="min-[684px]:mr-4">
           <Link
             href={`/channel?id=${data?.id?.channelId}`}
-            className="mb-2 text-lg font-medium"
+            className="mb-2 text-xs sm:text-sm md:text-lg font-medium"
           >
             {data?.snippet?.title}
           </Link>

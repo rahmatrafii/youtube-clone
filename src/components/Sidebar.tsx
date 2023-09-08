@@ -1,10 +1,19 @@
+"use client";
 import { sidebar } from "@/constants/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
+  const pathName = usePathname();
+  const desableSidebar = ["/watch"];
+
   return (
-    <section className="fixed md:w-[70px] md:h-full mb-1 md:mb-0 h-[60px] w-full bottom-0 md:bottom-0  sm:hidden left-0 md:top-[60px] md:100vh  md:block bg-white z-10">
+    <section
+      className={`fixed md:w-[70px] md:h-full mb-1 md:mb-0 h-[60px] w-full bottom-0 md:bottom-0  sm:hidden left-0 md:top-[60px] md:100vh   bg-white z-10 ${
+        desableSidebar.includes(pathName) ? "sm:hidden" : ""
+      }`}
+    >
       <div className="container mx-auto px-1 z-[1] bg-white ">
         <div className="flex md:flex-col flex-row justify-evenly">
           {sidebar.map(({ name, src }) => (
