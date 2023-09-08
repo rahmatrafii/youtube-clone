@@ -13,11 +13,11 @@ export default function Home() {
   } = useContext(AllContext);
   useEffect(() => {
     fetchFormApi(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
+      setVideos(data?.items)
     );
   }, [selectedCategory]);
   return (
-    <section className="">
+    <section className="md:ml-[75px] sm:mt-[130px] mt-[140px]">
       <Categories />
       <Videos videos={videos} />
     </section>

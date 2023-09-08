@@ -7,7 +7,7 @@ const Options = {
     maxResults: 10,
   },
   headers: {
-    "X-RapidAPI-Key": "7e1340a8dfmshb294797e0807a12p103c7bjsnd04876a9376e",
+    "X-RapidAPI-Key": "7ee16787a0msh4c499b9b558be00p1c3205jsn629706db891f",
     "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
   },
 };
@@ -42,4 +42,24 @@ export function KonvertDate(date: string) {
   }
 
   return ` ${selisihHari > 1 ? `${selisihHari} Days` : "1 Day"} ago`;
+}
+
+export function KonvertSubscriber(sub: string) {
+  const subs = parseInt(sub);
+
+  if (subs > 1000 && subs < 1000000) {
+    const result = (subs / 1000).toFixed(1);
+    if (result.split(".")[1] === "0") {
+      return `${(subs / 1000).toFixed(0)}K`;
+    }
+    return `${result}K`;
+  } else if (subs <= 1000) {
+    return `${subs}`;
+  } else if (subs >= 1000000) {
+    const result = (subs / 1000000).toFixed(1);
+    if (result.split(".")[1] === "0") {
+      return `${(subs / 1000000).toFixed(0)}M`;
+    }
+    return `${result}M`;
+  }
 }

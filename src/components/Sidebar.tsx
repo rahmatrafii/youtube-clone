@@ -11,7 +11,7 @@ const Sidebar = () => {
             <Link
               href={"/"}
               key={name}
-              className="w-[65px] h-[75px] flex-center flex-col hover:bg-gray-200 rounded-lg"
+              className="w-[65px] h-[75px] flex-center flex-col sm:hover:bg-gray-200 rounded-lg"
             >
               <Image src={src} alt={name} width={22} height={22} />
               <span key={name} className="text-[10px] font-normal mt-1">

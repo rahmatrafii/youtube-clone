@@ -1,5 +1,4 @@
 import SearchVideos from "@/components/SearchVideos";
-import Videos from "@/components/Videos";
 import { fetchFormApi } from "@/utils";
 import React from "react";
 
@@ -9,7 +8,6 @@ const page = async ({ searchParams }: any) => {
   ).then((data) => {
     return data?.items;
   });
-  console.log(AllVideos);
   const isDataEmpty =
     !Array.isArray(AllVideos) || AllVideos.length > 1 || !AllVideos;
   return (

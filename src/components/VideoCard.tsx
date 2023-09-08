@@ -9,7 +9,7 @@ const VideoCard = ({ video }: { video: YouTubeSearchResult }) => {
       className="h-max w-[500px] min-[684px]:w-[290px] md:w-[310px] min-[890px]:w-[350px] min-[1132px]:w-[326px] overflow-hidden mb-7 min-[990px]:w-[410px] xl:w-[365px]"
       key={video?.id?.videoId}
     >
-      <Link href={`/video/${video?.id?.videoId}`} className="">
+      <Link href={`/watch?v=${video?.id?.videoId}`} className="">
         <Image
           src={video?.snippet?.thumbnails?.high?.url}
           alt="Image"
@@ -20,13 +20,13 @@ const VideoCard = ({ video }: { video: YouTubeSearchResult }) => {
       </Link>
       <div className="flex flex-col mt-3 ">
         <Link
-          href={`/video/${video?.id?.videoId}`}
+          href={`/watch?v=${video?.id?.videoId}`}
           className="font-semibold text-base mb-1"
         >
           {video?.snippet?.title.slice(0, 60)}
         </Link>
         <Link
-          href={`/chanel/${video?.snippet?.channelId}`}
+          href={`/channel?id=${video?.snippet?.channelId}`}
           className="text-slate-500 text-sm font-normal mb-1"
         >
           {video?.snippet?.channelTitle}

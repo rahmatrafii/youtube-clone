@@ -17,7 +17,7 @@ export default function Icons({
       onClick={onClick}
     >
       {children}
-      <p className="absolute text-[13px] invisible group-hover:visible delay-75 transition  rounded-sm w-max p-2 bg-slate-900 bg-opacity-60 text-white translate-y-7 left-1/2 -translate-x-1/2">
+      <p className="absolute text-[13px] invisible sm:group-hover:visible delay-75 transition  rounded-sm w-max p-2 bg-slate-900 bg-opacity-60 text-white translate-y-7 left-1/2 -translate-x-1/2">
         {text}
       </p>
     </button>
