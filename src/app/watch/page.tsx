@@ -3,7 +3,7 @@ import RelatedVideoCard from "@/components/relatedVideoCard";
 import { VideoDetailsType, YouTubeSearchResult } from "@/types";
 import { fetchFormApi } from "@/utils";
 
-const page = async ({ searchParams }: any) => {
+const Watch = async ({ searchParams }: any) => {
   const videoDetail: VideoDetailsType = await fetchFormApi(
     `videos?part=snippet,statistics&id=${searchParams.v}`
   ).then((data) => data?.items[0]);
@@ -24,4 +24,4 @@ const page = async ({ searchParams }: any) => {
   );
 };
 
-export default page;
+export default Watch;

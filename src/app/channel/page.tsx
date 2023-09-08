@@ -5,7 +5,7 @@ import { ChannelDetailType } from "@/types";
 import { fetchFormApi } from "@/utils";
 import React from "react";
 
-const page = async ({ searchParams }: { searchParams: { id: string } }) => {
+const Channel = async ({ searchParams }: { searchParams: { id: string } }) => {
   const channelDetail: ChannelDetailType = await fetchFormApi(
     `channels?part=snippet&id=${searchParams.id}`
   ).then((data) => data?.items[0]);
@@ -24,4 +24,4 @@ const page = async ({ searchParams }: { searchParams: { id: string } }) => {
   );
 };
 
-export default page;
+export default Channel;

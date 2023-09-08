@@ -2,12 +2,13 @@ import SearchVideos from "@/components/SearchVideos";
 import { fetchFormApi } from "@/utils";
 import React from "react";
 
-const page = async ({ searchParams }: any) => {
-  const AllVideos = await fetchFormApi(
-    `search?part=snippet&q=${searchParams.q}`
-  ).then((data) => {
-    return data?.items;
-  });
+const Search = async ({ searchParams }: { searchParams: { q: string } }) => {
+  const q = searchParams?.q;
+  const AllVideos = await fetchFormApi(`search?part=snippet&q=${q}`).then(
+    (data) => {
+      return data?.items;
+    }
+  );
   const isDataEmpty =
     !Array.isArray(AllVideos) || AllVideos.length > 1 || !AllVideos;
   return (
@@ -17,4 +18,4 @@ const page = async ({ searchParams }: any) => {
   );
 };
 
-export default page;
+export default Search;
