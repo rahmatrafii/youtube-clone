@@ -16,6 +16,7 @@ const VideoPlayer = async ({
   const channelDetail = await fetchFormApi(
     `channels?part=snippet&id=${videoDetail?.snippet?.channelId}`
   ).then((data) => data?.items[0]);
+
   const subscriber = channelDetail?.statistics?.subscriberCount;
   const desc = videoDetail?.snippet?.description;
   const likeCount = videoDetail?.statistics?.likeCount;
@@ -33,7 +34,7 @@ const VideoPlayer = async ({
         <div className="min-[675px]:flex justify-between items-center ">
           <div className="flex items-center mb-4  min-[675px]:mb-0 min-[1000px]:mb-4 ">
             <Link
-              href={`/channel?id=${channelDetail?.id?.channelId}`}
+              href={`/channel?id=${channelDetail?.id}`}
               className="mr-1 lg:mr-3 flex-shrink-0 flex-center "
             >
               <Image
@@ -46,13 +47,13 @@ const VideoPlayer = async ({
             </Link>
             <div className="flex flex-col mr-1 lg:mr-3">
               <Link
-                href={`/channel?id=${channelDetail?.id?.channelId}`}
+                href={`/channel?id=${channelDetail?.id}`}
                 className="text-base font-semibold mr-3 min-[1100px]:hidden"
               >
                 {videoDetail?.snippet?.channelTitle.slice(0, 14)}...
               </Link>
               <Link
-                href={`/channel?id=${channelDetail?.id?.channelId}`}
+                href={`/channel?id=${channelDetail?.id}`}
                 className="text-base font-semibold mr-3 hidden min-[1100px]:block"
               >
                 {videoDetail?.snippet?.channelTitle}
