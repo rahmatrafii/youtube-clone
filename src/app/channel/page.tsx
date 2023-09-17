@@ -14,7 +14,7 @@ const Channel = async ({ searchParams }: { searchParams: { id: string } }) => {
   ).then((data) => data?.items);
 
   return (
-    <section className="pt-[60px] md:pl-[75px]">
+    <section className="">
       <div className="">
         <ChannelInfo channelDetail={channelDetail} />
         <ChannelCategories />

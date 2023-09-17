@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <section
-      className={`fixed md:w-[70px] md:h-full mb-1 md:mb-0 h-[60px] w-full bottom-0 md:bottom-0  sm:hidden left-0 md:top-[60px] md:100vh   bg-white z-10 ${
+      className={`fixed md:w-[70px] md:h-full mb-1 md:mb-0 h-[60px] w-full bottom-0 md:bottom-0  left-0 md:top-[60px] md:100vh   bg-white z-10 ${
         desableSidebar.includes(pathName) ? "sm:hidden" : ""
       }`}
     >

@@ -17,7 +17,7 @@ export default function Home() {
     );
   }, [selectedCategory]);
   return (
-    <section className="md:ml-[75px] sm:mt-[130px] mt-[140px]">
+    <section className="">
       <Categories />
       <Videos videos={videos} />
     </section>

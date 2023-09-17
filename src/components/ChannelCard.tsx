@@ -9,7 +9,7 @@ const ChannelCard = async ({ data }: any) => {
   ).then((data) => data?.items[0]);
   const subscriber = channelDetail?.statistics?.subscriberCount;
   return (
-    <div className="w-full h-[150px] min-[684px]:h-[200px] flex justify-center items-center min-[684px]:justify-start ">
+    <div className="w-full h-[150px] min-[684px]:h-[200px] flex justify-center items-center min-[684px]:justify-start mb-7">
       <Link
         href={`/channel?id=${data?.id?.channelId}`}
         className="mr-7  min-[684px]:mr-4 min-[480px]:h-[230px] min-[510px]:h-[260px] min-[564px]:h-[282px] min-[684px]:w-[290px] min-[684px]:h-[162px] xl:w-[410px] xl:h-[230px] lg:w-[350px] lg:h-[196px] flex-shrink-0 flex-center"

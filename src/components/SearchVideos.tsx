@@ -3,7 +3,7 @@ import ChannelCard from "./ChannelCard";
 
 const SearchVideos = ({ videos }: { videos: any[] }) => {
   return (
-    <section className="md:ml-[75px] mt-[80px] px-6 pb-[50px]">
+    <section className=" px-6 pb-[50px]">
       <div className="flex justify-evenly flex-wrap items-start mx-auto">
         {videos?.map((data: any) => (
           <>

@@ -13,7 +13,7 @@ const Watch = async ({ searchParams }: any) => {
   ).then((data) => data?.items);
 
   return (
-    <section className="pt-[90px] px-6 min-[1000px]:flex">
+    <section className=" px-6 min-[1000px]:flex">
       <VideoPlayer videoDetail={videoDetail} />
       <div className="flex-grow  flex justify-evenly flex-wrap items-start mx-auto">
         {realatedVideos?.map((video) => (
