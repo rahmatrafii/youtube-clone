@@ -3,9 +3,25 @@ import ChannelInfo from "@/components/ChannelInfo";
 import Videos from "@/components/Videos";
 import { ChannelDetailType } from "@/types";
 import { fetchFormApi } from "@/utils";
+import { Metadata } from "next";
 import React from "react";
 
-const Channel = async ({ searchParams }: { searchParams: { id: string } }) => {
+type Props = {
+  searchParams: { id: string };
+};
+export async function generateMetadata({
+  searchParams,
+}: Props): Promise<Metadata> {
+  const channelDetail: ChannelDetailType = await fetchFormApi(
+    `channels?part=snippet&id=${searchParams.id}`
+  ).then((data) => data?.items[0]);
+
+  return {
+    title: `${channelDetail?.snippet?.title}`,
+  };
+}
+
+const Channel = async ({ searchParams }: Props) => {
   const channelDetail: ChannelDetailType = await fetchFormApi(
     `channels?part=snippet&id=${searchParams.id}`
   ).then((data) => data?.items[0]);

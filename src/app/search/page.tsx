@@ -1,6 +1,15 @@
 import SearchVideos from "@/components/SearchVideos";
 import { fetchFormApi } from "@/utils";
 import React from "react";
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { q: string };
+}) {
+  return {
+    title: `${searchParams.q}`,
+  };
+}
 
 const Search = async ({ searchParams }: { searchParams: { q: string } }) => {
   const q = searchParams?.q;

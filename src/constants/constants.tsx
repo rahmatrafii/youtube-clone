@@ -36,7 +36,7 @@ export const categoris = [
 export const sidebar = [
   {
     name: "Home",
-    src: "/icon-yt/home.png",
+    src: "/icon-yt/home-active.png",
   },
   {
     name: "Shorts",
