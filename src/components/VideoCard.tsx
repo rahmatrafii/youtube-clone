@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 const VideoCard = ({ video }: { video: YouTubeSearchResult }) => {
+  const image = video?.snippet?.thumbnails?.high?.url;
   return (
     <div
-      className="h-max w-[500px] min-[684px]:w-[290px] md:w-[310px] min-[890px]:w-[350px] min-[1132px]:w-[326px] overflow-hidden mb-7 min-[990px]:w-[410px] xl:w-[365px]"
+      className="h-max w-[500px] min-[684px]:w-[290px] md:w-[310px] min-[890px]:w-[350px] min-[1132px]:w-[326px] overflow-hidden mb-7 min-[990px]:w-[410px] xl:w-[365px] "
       key={video?.id?.videoId}
     >
       <Link href={`/watch?v=${video?.id?.videoId}`} className="">
         <Image
-          src={video?.snippet?.thumbnails?.high?.url}
+          src={image ? `${image}` : "/icon-yt/alternateImage.png"}
           alt="Image"
           width={200}
           height={200}

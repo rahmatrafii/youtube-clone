@@ -16,13 +16,20 @@ const Sidebar = () => {
     >
       <div className="container mx-auto px-1 z-[1] bg-white ">
         <div className="flex md:flex-col flex-row justify-evenly">
-          {sidebar.map(({ name, src }) => (
+          {sidebar.map(({ name, src, link }) => (
             <Link
-              href={"/"}
+              href={link}
               key={name}
               className="w-[65px] h-[75px] flex-center flex-col sm:hover:bg-gray-200 rounded-lg"
             >
-              <Image src={src} alt={name} width={22} height={22} />
+              <Image
+                src={`/icon-yt/${
+                  link === pathName ? `active-${src}` : `${src}`
+                }`}
+                alt={name}
+                width={22}
+                height={22}
+              />
               <span key={name} className="text-[10px] font-normal mt-1">
                 {name}
               </span>

@@ -1,6 +1,3 @@
-import { GrHistory } from "react-icons/gr";
-import { MdOutlineWatchLater } from "react-icons/md";
-import { AiOutlineLike } from "react-icons/ai";
 import { PiMusicNote } from "react-icons/pi";
 import { MdOutlineMovie } from "react-icons/md";
 import { IoGameControllerOutline } from "react-icons/io5";
@@ -36,19 +33,23 @@ export const categoris = [
 export const sidebar = [
   {
     name: "Home",
-    src: "/icon-yt/home-active.png",
+    src: "home.png",
+    link: "/",
   },
   {
     name: "Shorts",
-    src: "/icon-yt/short.png",
+    src: "shorts.png",
+    link: "/shorts",
   },
   {
     name: "Subscriptions",
-    src: "/icon-yt/Subscriptions.png",
+    src: "subscriptions.png",
+    link: "/subscriptions",
   },
   {
     name: "Library",
-    src: "/icon-yt/Library.png",
+    src: "library.png",
+    link: "/library",
   },
 ];
 export const sidebarHiden = [

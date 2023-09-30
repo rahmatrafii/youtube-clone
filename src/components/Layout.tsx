@@ -9,9 +9,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Header />
-      <Sidebar />
+      {path !== "/watch" && <Sidebar />}
       <main
-        className={`${path === "/" ? "pt-[140px]" : "pt-[70px]"} ${
+        className={`pt-[70px] ${
           path === "/watch" ? "pl-[0]" : "md:pl-[60px]"
         }  w-full relative `}
       >
