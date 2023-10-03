@@ -8,6 +8,7 @@ const ChannelCard = async ({ data }: any) => {
     `channels?part=snippet&id=${data?.id?.channelId}`
   ).then((data) => data?.items[0]);
   const subscriber = channelDetail?.statistics?.subscriberCount;
+  console.log(data?.snippet?.thumbnails?.high?.url);
   return (
     <div className="w-full h-[150px] min-[684px]:h-[200px] flex justify-center items-center min-[684px]:justify-start mb-7">
       <Link

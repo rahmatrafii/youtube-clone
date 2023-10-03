@@ -60,25 +60,25 @@ export const sidebarHiden = [
     },
     {
       name: "Shorts",
-      src: "/static/image/short.png",
+      src: "/static/image/shorts.png",
     },
     {
       name: "Subscriptions",
-      src: "/static/image/Subscriptions.png",
+      src: "/static/image/subscriptions.png",
     },
   ],
   [
     {
       name: "Library",
-      src: "/static/image/Library.png",
+      src: "/static/image/library.png",
     },
     {
       name: "History",
-      src: "/static/image/history2.png",
+      src: "/static/image/history.png",
     },
     {
       name: "Your Vidios",
-      src: "/static/image/Your Videos.png",
+      src: "/static/image/your-videos.png",
     },
     {
       name: "Watch Later",
