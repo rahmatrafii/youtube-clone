@@ -23,8 +23,8 @@ const Sidebar = () => {
               className="w-[65px] h-[75px] flex-center flex-col sm:hover:bg-gray-200 rounded-lg"
             >
               <Image
-                src={`/icon-yt/${
-                  link === pathName ? `active-${src}` : `${src}`
+                src={`/static/image/${
+                  link === pathName ? `active-${src}` : src
                 }`}
                 alt={name}
                 width={22}

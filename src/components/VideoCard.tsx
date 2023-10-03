@@ -12,7 +12,7 @@ const VideoCard = ({ video }: { video: YouTubeSearchResult }) => {
     >
       <Link href={`/watch?v=${video?.id?.videoId}`} className="">
         <Image
-          src={image ? `${image}` : "/icon-yt/alternateImage.png"}
+          src={image ? image : "/static/image/alternateImage.png"}
           alt="Image"
           width={200}
           height={200}

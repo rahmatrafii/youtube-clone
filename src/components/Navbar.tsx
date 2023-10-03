@@ -103,7 +103,7 @@ const Navbar = () => {
         </Icons>
         <div className=" md:ml-0">
           <Image
-            src={"/icon-yt/profile.jpg"}
+            src={"/static/image/profile.jpg"}
             alt="profile"
             width={30}
             height={30}

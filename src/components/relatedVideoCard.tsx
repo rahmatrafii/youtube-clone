@@ -18,7 +18,7 @@ const SearchVideoCard = ({ video }: { video: YouTubeSearchResult }) => {
         className="h-max w-max  flex-none min-[684px]:mr-4"
       >
         <Image
-          src={image ? `${image}` : "/icon-yt/alternateImage.png"}
+          src={image ? image : "/static/image/alternateImage.png"}
           alt="Image"
           width={200}
           height={200}

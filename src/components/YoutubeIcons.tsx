@@ -14,7 +14,7 @@ const YoutubeIcons = () => {
         onClick={() => dispatch({ type: "SIDEBAR_MODE" })}
       >
         <Image
-          src={"/icon-yt/hamburger.png"}
+          src={"/static/image/hamburger.png"}
           alt="hamburger"
           width={26}
           height={33}
@@ -22,7 +22,7 @@ const YoutubeIcons = () => {
       </button>
       <div>
         <Image
-          src={"/icon-yt/youtube-light.png"}
+          src={"/static/image/youtube-light.png"}
           alt="youtube"
           width={105}
           height={75}

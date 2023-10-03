@@ -56,37 +56,37 @@ export const sidebarHiden = [
   [
     {
       name: "Home",
-      src: "/icon-yt/home.png",
+      src: "/static/image/home.png",
     },
     {
       name: "Shorts",
-      src: "/icon-yt/short.png",
+      src: "/static/image/short.png",
     },
     {
       name: "Subscriptions",
-      src: "/icon-yt/Subscriptions.png",
+      src: "/static/image/Subscriptions.png",
     },
   ],
   [
     {
       name: "Library",
-      src: "/icon-yt/Library.png",
+      src: "/static/image/Library.png",
     },
     {
       name: "History",
-      src: "/icon-yt/history2.png",
+      src: "/static/image/history2.png",
     },
     {
       name: "Your Vidios",
-      src: "/icon-yt/Your Videos.png",
+      src: "/static/image/Your Videos.png",
     },
     {
       name: "Watch Later",
-      src: "/icon-yt/watch-later.png",
+      src: "/static/image/watch-later.png",
     },
     {
       name: "Liked Vidios",
-      src: "/icon-yt/like.png",
+      src: "/static/image/like.png",
     },
   ],
 ];
